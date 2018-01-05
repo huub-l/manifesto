@@ -1,0 +1,62 @@
+//HP video masthead
+.masthead.video {
+  position: relative;
+  top: 0;
+  z-index: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+
+  video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .mastehad-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.42);
+    color: $white;
+
+    h1 {
+      font-family: $header-font;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.1em;
+      margin-bottom: 50px;
+
+      b {
+        font-weight: 900;
+      }
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-family: $header-font;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.502);
+      letter-spacing: 0.15em;
+    }
+  }
+
+  .page-down {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+  }
+}
