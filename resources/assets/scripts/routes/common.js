@@ -19,6 +19,12 @@ export default {
           $("body").removeClass("sticky");
         }
       });
+      //Scroll past masthead
+      $("#page-down").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#top-content").offset().top  -113,
+          }, 2000);
+      });
 
       var $icon = $("#mobile-menu-button");
       var API = $menu.data( "mmenu" );

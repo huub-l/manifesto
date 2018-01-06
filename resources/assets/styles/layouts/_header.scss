@@ -14,7 +14,7 @@ header.banner {
 }
 
 .sticky header.banner {
-  background-color: $dark-bg;
+  background-color: $brand-primary;
   transition: background-color 0.5s ease;
 }
 
@@ -36,7 +36,7 @@ header.banner {
     ul {
       li.menu-item {
         a {
-          color: $header-text;
+          color: $text-color;
           text-transform: uppercase;
           font-family: $header-font;
           letter-spacing: 0.2em;
@@ -79,7 +79,7 @@ header.banner {
   position: absolute;
   height: 9px;
   width: 50%;
-  background: #d3531a;
+  background: $brand-secondary;
   border-radius: 9px;
   opacity: 1;
   left: 0;

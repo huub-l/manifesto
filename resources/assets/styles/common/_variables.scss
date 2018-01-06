@@ -8,11 +8,24 @@ $slick-loader-path: "~slick-carousel/slick/";
 $brand-primary: #171717;
 $brand-secondary: #e4b309;
 $brand-tertiary: #1f1f1f;
-$dark-bg: #171717;
-$header-text: #ebebeb;
+$text-color: #ebebeb;
 $white: #ebebeb;
 $btn-text: $brand-secondary;
 
 //Fonts
 $header-font: Nunito Sans;
 $btn-font: Nunito Sans;
+
+//Bootstrap overides
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");

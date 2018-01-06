@@ -1,0 +1,15 @@
+.featured-coffee {
+  background-color: $brand-tertiary;
+  padding-top: 200px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+
+  .coffee-product {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

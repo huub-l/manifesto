@@ -1,3 +1,6 @@
+//Bootstrap variables and functions
+@import "~bootstrap/scss/functions"; /* or @import "common/functions"; */
+@import "~bootstrap/scss/variables"; /* or @import "common/functions"; */
 @import "common/variables";
 
 /** Import everything from autoload */
@@ -30,6 +33,8 @@
 @import "layouts/header";
 @import "layouts/masthead";
 @import "layouts/sidebar";
+@import "layouts/section-about-us";
+@import "layouts/section-featured-coffee";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";

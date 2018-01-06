@@ -1,0 +1,33 @@
+.section-about-us {
+  margin: 80px 0 0;
+
+  .content-left {
+    z-index: 1;
+  }
+
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btn {
+      margin-top: 70px;
+    }
+  }
+  //Below max width md
+  @include media-breakpoint-down(md) {
+    .content-left {
+      order: 2;
+    }
+
+    .content-right {
+      order: 1;
+      text-align: center;
+
+      .btn {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

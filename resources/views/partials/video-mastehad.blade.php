@@ -20,6 +20,6 @@
         <a href="{{$masthead_button_url}}" class="btn">{{$masthead_button_text}}</a>
       @endif
     </div>
-    <a href="#top-content" class="page-down"><img src="@asset('images/page-down.png')"></a>
+    <a href="javascript:void(0)" id="page-down"><img src="@asset('images/page-down.png')"></a>
 </div>
 <div id="top-content"></div>
