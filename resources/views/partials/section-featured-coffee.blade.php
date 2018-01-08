@@ -18,7 +18,7 @@
           <a href="{{get_permalink()}}" class="col-lg-4 d-flex coffee-product">
             {!!woocommerce_get_product_thumbnail()!!}
             <h3>{{get_the_title()}}</h3>
-            <h5>{{$product->get_short_description()}}</h5>
+            <h5>{!!$product->get_short_description()!!}</h5>
           </a>
 
           @php

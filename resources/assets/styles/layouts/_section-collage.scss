@@ -1,0 +1,41 @@
+.photo-collage {
+  padding-bottom: 140px;
+
+  .filler-top {
+    height: 140px;
+    background-color: $brand-tertiary;
+  }
+
+  .row {
+    position: relative;
+    margin-top: -100px;
+    z-index: 1;
+  }
+
+  img {
+    box-shadow: 0 14px 13px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .photo-1 {
+    & img {
+      position: relative;
+      bottom: -25px;
+      z-index: -1;
+    }
+  }
+
+  .photo-2 {
+    position: absolute;
+    right: 0;
+  }
+
+  .photo-3 {
+    position: relative;
+    z-index: 3;
+
+    img {
+      position: absolute;
+      bottom: -75px;
+    }
+  }
+}

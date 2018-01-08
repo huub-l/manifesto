@@ -28,13 +28,29 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 1.188em;
+  text-transform: uppercase;
+  line-height: 1.938;
+  letter-spacing: 0.14em;
+}
+
 h5 {
-  font-size: 1.313em;
+  font-size: 1em;
   font-family: $header-font;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
 }
 
 a {
   color: $text-color;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+  }
 }
 
 .relative-wrap {
@@ -59,6 +75,10 @@ a {
     right: -50px;
     bottom: -50px;
     box-shadow: 0 14px 13px 0 rgba(0, 0, 0, 0.24);
+
+    &.img-up {
+      top: -40px;
+    }
   }
 }
 

@@ -1,0 +1,26 @@
+.featured-posts {
+  text-align: center;
+  background: $brand-tertiary;
+  padding-top: 150px;
+  padding-bottom: 135px;
+
+  h2 {
+    margin-bottom: 35px;
+  }
+
+  .blog-post {
+    &:hover {
+      background-color: rgb(31, 31, 31);
+      box-shadow: 10px 14px 13px 0 rgba(0, 0, 0, 0.24);
+      z-index: 1;
+    }
+
+    .post-info {
+      padding: 55px 15px;
+    }
+  }
+
+  .btn {
+    margin-top: 50px;
+  }
+}
