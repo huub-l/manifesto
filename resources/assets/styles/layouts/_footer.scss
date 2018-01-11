@@ -1,0 +1,73 @@
+footer.content-info {
+  .footer-overflow {
+    height: 70px;
+    width: 100%;
+    background-color: $brand-tertiary;
+  }
+
+  .content-left {
+    display: flex;
+    flex-flow: wrap;
+
+    h2 {
+      flex: 0 0 100%;
+    }
+
+    address {
+      flex: 0 0 50%;
+    }
+
+    .hours {
+      flex: 0 0 50%;
+    }
+  }
+
+  .content-right {
+    z-index: 1;
+
+    .insta-border {
+      border: solid 2px $brand-secondary;
+      margin-top: -25px;
+      margin-right: 45px;
+      display: inline-block;
+      z-index: initial;
+      pointer-events: none;
+    }
+
+    #instafeed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      top: -45px;
+      right: -45px;
+      z-index: -1;
+
+      a {
+        display: block;
+        width: 265px;
+        padding-top: 50%;
+        flex: 0 0 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: initial;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .content-right {
+      order: 1;
+    }
+
+    .content-left {
+      order: 2;
+
+      address,
+      .hours {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

@@ -83,41 +83,32 @@ function asset_path($asset)
  * @param string|string[] $templates Possible template files
  * @return array
  */
-function filter_templates($templates)
-{
-    $paths = apply_filters('sage/filter_templates/paths', [
-        'views',
-        'resources/views'
-    ]);
-    $paths_pattern = "#^(" . implode('|', $paths) . ")/#";
-
-    return collect($templates)
-        ->map(function ($template) use ($paths_pattern) {
-            /** Remove .blade.php/.blade/.php from template names */
-            $template = preg_replace('#\.(blade\.?)?(php)?$#', '', ltrim($template));
-
-            /** Remove partial $paths from the beginning of template names */
-            if (strpos($template, '/')) {
-                $template = preg_replace($paths_pattern, '', $template);
-            }
-
-            return $template;
-        })
-        ->flatMap(function ($template) use ($paths) {
-            return collect($paths)
-                ->flatMap(function ($path) use ($template) {
-                    return [
-                        "{$path}/{$template}.blade.php",
-                        "{$path}/{$template}.php",
-                        "{$template}.blade.php",
-                        "{$template}.php",
-                    ];
-                });
-        })
-        ->filter()
-        ->unique()
-        ->all();
-}
+ /**
+  * So here I added 'resources/views/woocommerce' to the $paths,
+  * so filter_templates will also look in the woocommerce folder under resources/views.
+  */
+ function filter_templates($templates)
+ {
+     return collect($templates)
+         ->map(function ($template) {
+             return preg_replace('#\.(blade\.)?php$#', '', ltrim($template));
+         })
+         ->flatMap(function ($template) {
+             $paths = apply_filters('sage/filter_templates/paths', ['views', 'resources/views', 'resources/views/woocommerce']);
+             return collect($paths)
+                 ->flatMap(function ($path) use ($template) {
+                     return [
+                         "{$path}/{$template}.blade.php",
+                         "{$path}/{$template}.php",
+                         "{$template}.blade.php",
+                         "{$template}.php",
+                     ];
+                 });
+         })
+         ->filter()
+         ->unique()
+         ->all();
+ }
 
 /**
  * @param string|string[] $templates Relative path to possible template files

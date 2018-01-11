@@ -86,12 +86,27 @@ a {
   z-index: 1;
 }
 
-//extends
-%font-awesome {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.social-menu a {
+  font-family: FontAwesome;
+  padding-right: 10px;
+
+  &[href*="facebook"]::before {
+    content: $fa-var-facebook;
+  }
+
+  &[href*="twitter"]::before {
+    content: $fa-var-twitter;
+  }
+
+  &[href*="instagram"]::before {
+    content: $fa-var-instagram;
+  }
+
+  &[href*="linkedin"]::before {
+    content: $fa-var-linkedin;
+  }
+
+  &[href*="google"]::before {
+    content: $fa-var-google-plus;
+  }
 }

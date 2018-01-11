@@ -7,8 +7,12 @@ import 'slick-carousel/slick/slick.min';
 //Import Mmenu
 import 'jquery.mmenu/dist/jquery.mmenu.all.js';
 
+// Import Instafeed
+import 'instafeed/lib/instafeed.js';
+
 // Import everything from autoload
 import "./autoload/**/*"
+
 
 // import local dependencies
 import Router from './util/Router';
