@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    @include('partials.video-mastehad')
+    @include('partials..mastheads.video-mastehad')
     @include('partials.section-about-us')
     @include('partials.section-featured-coffee')
     @include('partials.section-collage')

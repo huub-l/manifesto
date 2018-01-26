@@ -1,0 +1,23 @@
+section.team {
+  background-color: $brand-tertiary;
+  padding-top: 50px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .team-photo {
+    padding-top: 100%;
+  }
+
+  .team-info {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    p {
+      color: #aeaeae;
+    }
+  }
+}

@@ -11,6 +11,11 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
+    <nav class="nav-cart">
+      @if (has_nav_menu('cart_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'cart_navigation', 'menu_class' => 'nav']) !!}
+      @endif
+    </nav>
     <button id="mobile-menu-button">
       <span></span>
       <span></span>
@@ -19,5 +24,8 @@
       <span></span>
       <span></span>
     </button>
+  </div>
+  <div class="search">
+    @php(get_search_form())
   </div>
 </header>

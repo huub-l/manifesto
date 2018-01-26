@@ -123,3 +123,17 @@ add_filter('wc_get_template', function ($located, $template_name, $args, $templa
     }
     return $located;
 }, PHP_INT_MAX, 5);
+
+add_filter('get_search_form', function () {
+  $form = '';
+  echo template('partials.site-search-form');
+  return $form;
+});
+
+add_filter('action_woocommerce_before_add_to_cart_quantity', function () {
+  echo "<div>string</div>";
+  return 'this';
+});
+
+// add the action
+//add_action( 'woocommerce_before_add_to_cart_quantity', 'action_woocommerce_before_add_to_cart_quantity', 10, 0 );

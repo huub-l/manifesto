@@ -1,0 +1,30 @@
+.section-team-intro {
+  padding: 85px 0 0;
+  background-color: $brand-primary;
+
+  .team-intro-overflow {
+    height: 145px;
+    width: 100%;
+    background-color: $brand-tertiary;
+  }
+
+  .content-right {
+    z-index: 1;
+  }
+
+  .content-left {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  //Below max width md
+  @include media-breakpoint-down(md) {
+    padding: 45px 0 0;
+
+    .content-left {
+      text-align: center;
+      margin: 50px 0;
+    }
+  }
+}

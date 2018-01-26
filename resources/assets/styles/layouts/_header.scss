@@ -1,32 +1,54 @@
+body:not(.home) #page-wrap > .wrap {
+  padding-top: 80px;
+}
+
 .banner .nav li {
   @extend .nav-item;
 }
 
 .banner .nav a {
   @extend .nav-link;
+
+  margin: 0.5rem 1rem 0;
+  padding: 0 0 0.5rem;
 }
 
 header.banner {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  transition: background-color 0.5s ease;
+  transition: all 0.5s ease;
+
+  .header-logo {
+    transition: all 0.5s ease;
+    height: 93px;
+  }
 }
 
+body:not(.home) header.banner,
 .sticky header.banner {
   background-color: $brand-primary;
   transition: background-color 0.5s ease;
+
+  .header-logo {
+    transition: all 0.5s ease;
+    height: 70px;
+  }
 }
 
 .header-container {
-  padding: 10px 30px;
+  padding: 5px 70px;
   display: flex;
+
+  @include media-breakpoint-down(md) {
+    padding: 5px 20px;
+  }
 }
 
 //Destop menu
 .nav-primary {
   display: none;
-  margin-left: auto;
+  margin: 0 auto;
   align-items: center;
 
   .menu-header-menu-container {
@@ -40,6 +62,17 @@ header.banner {
           text-transform: uppercase;
           font-family: $header-font;
           letter-spacing: 0.2em;
+          position: relative;
+
+          &.active-page::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: $brand-secondary;
+            display: block;
+            position: absolute;
+            bottom: -20px;
+          }
         }
       }
     }
@@ -50,12 +83,43 @@ header.banner {
   }
 }
 
+//Cart menu
+.nav-cart {
+  display: flex;
+  align-items: center;
+
+  .menu-search-cart-container {
+    display: flex;
+    align-items: center;
+
+    ul {
+      li.menu-item {
+        a {
+          color: $text-color;
+          text-transform: uppercase;
+          font-family: $header-font;
+          letter-spacing: 0.2em;
+        }
+
+        &.shopping-basket a {
+          color: $brand-secondary;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
 //Mobile Menu
 #mobile-menu-button {
   width: 60px;
   height: 45px;
   position: relative;
-  margin: 50px auto;
+  margin: 15px 0;
+  margin-left: auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -162,4 +226,42 @@ header.banner {
 #mobile-menu-button.is-active span:nth-child(6) {
   left: calc(50% - 5px);
   top: 29px;
+}
+
+//Seach
+
+header .search {
+  background-color: $brand-primary;
+  padding: 5px 70px;
+  display: none;
+
+  &.show {
+    display: flex;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+
+    & > label {
+      flex-grow: 1;
+      padding: 5px 15px;
+    }
+
+    .search-field {
+      width: 100%;
+      border-radius: inherit;
+      border: none;
+      border-bottom: 1px solid white;
+      text-align: right;
+      background: none !important;
+      color: white !important;
+      box-shadow: 0 0 0 !important;
+    }
+
+    .search-submit {
+      background: none;
+      padding: 10px 35px;
+    }
+  }
 }

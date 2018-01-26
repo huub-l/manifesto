@@ -1,0 +1,47 @@
+.blog-filter {
+  background-color: $brand-tertiary;
+  padding-top: 50px;
+
+  .container.d-flex {
+    justify-content: center;
+  }
+
+  .interested-in {
+    border: 2px solid #e4b309;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: bold;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  .dropdown {
+    .btn {
+      color: $white;
+      font-weight: 300;
+
+      &:hover {
+        background-color: transparent;
+        border: 2px solid #e4b309;
+      }
+    }
+
+    .dropdown-menu.show {
+      width: 100%;
+      border-radius: 0;
+      background-color: $brand-primary;
+
+      a {
+        color: $white;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

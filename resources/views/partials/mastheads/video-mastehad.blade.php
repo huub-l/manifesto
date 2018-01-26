@@ -8,18 +8,17 @@
   $masthead_button_url = get_field('masthead_button_url');
 @endphp
 
-
-<div class="masthead video" style="background: url({{$fallback_image}}) no-repeat center center; background-size: cover;">
+<section class="masthead video" style="background: url({{$fallback_image}}) no-repeat center center; background-size: cover;">
     <video id="video-background" class="video-masthead" autoplay loop muted plays-inline>
       <source src="{{$video_url}}" type="video/mp4">
     </video>
     <div class="mastehad-text">
       <h5>{{$mast_text_line_1}}</h5>
-      <h1><b>{{$mast_text_line_2}}</b><br>{{$mast_text_line_3}}</h1>
+      <h1><strong>{{$mast_text_line_2}}</strong><br>{{$mast_text_line_3}}</h1>
       @if($masthead_button_url)
         <a href="{{$masthead_button_url}}" class="btn">{{$masthead_button_text}}</a>
       @endif
     </div>
     <a href="javascript:void(0)" id="page-down"><img src="@asset('images/page-down.png')"></a>
-</div>
+</section>
 <div id="top-content"></div>

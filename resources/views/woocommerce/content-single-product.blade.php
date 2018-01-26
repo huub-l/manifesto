@@ -12,22 +12,20 @@
 @php
   global $product;
 @endphp
-
-<div class="col-6">
+<div class="col-lg-6 product-img-wrap">
   <div class="img-fluid">
     {{ App\wc_get_template('single-product/product-image.php') }}
   </div>
 </div>
-<div class="col-6">
+<div class="col-lg-6">
 
   {{ App\wc_get_template('single-product/title.php') }}
-  {{ App\wc_get_template('single-product/rating.php') }}
-  {{ App\wc_get_template('single-product/price.php') }}
   {{ App\wc_get_template('single-product/short-description.php') }}
-  {{ App\wc_get_template('single-product/meta.php') }}
-  {{ App\wc_get_template('add-to-cart/simple.php') }}
-  {{ App\wc_get_template('single-product/reviews.php') }}
-  {{ App\wc_get_template_part('single', 'product-review') }}
+  {{ App\wc_get_template('single-product/price.php') }}
+  <div class="full-description">
+    {{ App\wc_get_template('single-product/tabs/description.php') }}
+  </div>
+  {{ App\wc_get_template('single-product/add-to-cart/simple.php') }}
 
 </div>
 

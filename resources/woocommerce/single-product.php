@@ -8,7 +8,7 @@
  *
  * So we just fool Wordpress & Woocommerce with this.
  */
-    $template = 'woocommerce.archive-product';
+    $template = 'woocommerce.single-product';
     $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
         return apply_filters("sage/template/{$class}/data", $data, $template);
     }, []);

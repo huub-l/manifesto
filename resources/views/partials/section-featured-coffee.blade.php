@@ -5,7 +5,7 @@
       @php
         $args = array(
           'post_type'      => 'product',
-          'posts_per_page' => 10,
+          'posts_per_page' => 3,
           'product_cat'    => 'roasts'
         );
 
@@ -15,7 +15,7 @@
           global $product;
           @endphp
 
-          <a href="{{get_permalink()}}" class="col-lg-4 d-flex coffee-product">
+          <a href="{{get_permalink()}}" class="col-lg-4 d-flex product-card">
             {!!woocommerce_get_product_thumbnail()!!}
             <h3>{{get_the_title()}}</h3>
             <h5>{!!$product->get_short_description()!!}</h5>

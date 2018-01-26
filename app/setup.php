@@ -40,7 +40,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+      'primary_navigation' => __('Primary Navigation', 'sage'),
+      'cart_navigation' => __('Cart Menu', 'sage')
     ]);
 
     /**
@@ -251,8 +252,10 @@ function wc_get_template( $template_name, $args = array(), $template_path = '', 
 //Hide WYSIWYG on frontpage tempalte
 add_action( 'admin_head', function() {
 	$template_file = basename(get_page_template());
-	if($template_file == 'template-frontpage.blade.php'){
+  $page_title = get_the_title(get_the_ID());
+	if($template_file == 'template-frontpage.blade.php' || $page_title == 'Shop' ||$template_file == 'template-team.blade.php' ){
 		remove_post_type_support('page', 'editor');
+    get_admin_page_title();
 	}
 });
 
@@ -260,17 +263,19 @@ add_action( 'admin_head', function() {
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
+    'page_title' 	=> 'Footer Settings',
+		'menu_title'	=> 'Footer',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
+}
 
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Footer Settings',
-		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'theme-general-settings',
-	));
-
+//Construct Loop & Results
+function store_filter(){
+  $cat_id = $_GET['category'];
+  echo $cat_id;
+  //$posts_page = $_GET['post_page'];
+  // include(locate_template('templates/archive-blog.php'));
+  die();
 }

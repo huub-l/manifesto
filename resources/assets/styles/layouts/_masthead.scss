@@ -1,3 +1,25 @@
+//Default masthead
+.masthead.default {
+  height: 420px;
+
+  .filter {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      h1 {
+        margin: auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
 //HP video masthead
 .masthead.video {
   position: relative;
@@ -60,4 +82,8 @@
     height: 30px;
     width: 30px;
   }
+}
+
+.masthead.breadcrumb-only {
+  background-color: $brand-tertiary;
 }

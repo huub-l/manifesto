@@ -1,4 +1,6 @@
 footer.content-info {
+  margin-bottom: 50px;
+
   .footer-overflow {
     height: 70px;
     width: 100%;
@@ -11,6 +13,7 @@ footer.content-info {
 
     h2 {
       flex: 0 0 100%;
+      margin-top: auto;
     }
 
     address {
@@ -19,6 +22,20 @@ footer.content-info {
 
     .hours {
       flex: 0 0 50%;
+    }
+
+    .social-footer {
+      flex: 0 0 100%;
+    }
+
+    .copyright {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: flex-end;
+
+      p {
+        margin: 0;
+      }
     }
   }
 

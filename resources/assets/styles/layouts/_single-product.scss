@@ -1,0 +1,39 @@
+section.single-product {
+  background-color: $brand-tertiary;
+  padding: 50px 0 75px;
+
+  h1 {
+    font-size: 2.375em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 0.135em;
+  }
+
+  .product-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .woocommerce-product-gallery__image {
+    text-align: center;
+  }
+
+  .woocommerce-product-details__short-description {
+    color: #aeaeae;
+    font-size: 1.5em;
+    letter-spacing: 0.075em;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  p.price {
+    color: $brand-secondary;
+    font-size: 1.688em;
+    margin-bottom: 45px;
+  }
+
+  .full-description {
+    margin-bottom: 75px;
+  }
+}

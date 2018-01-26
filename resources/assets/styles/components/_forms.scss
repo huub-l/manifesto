@@ -17,3 +17,18 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+.nf-form-cont {
+  .ninja-forms-field[type="button"] {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+}
+
+.submit-container {
+  margin-bottom: 0;
+}
+
+.ninja-forms-req-symbol {
+  color: $brand-secondary;
+}

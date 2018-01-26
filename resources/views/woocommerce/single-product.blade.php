@@ -7,16 +7,19 @@
 
 @extends('layouts.app')
 
-@include('partials.headers.woocommerce-header')
-
 @section('content')
-  <div class="container">
-    <div class="row">
-      @while(have_posts()) @php(the_post())
+  @include('partials.mastheads.breadcrumb-only')
+  <section class="single-product">
+    <div class="container">
+      <div class="row">
+        @while(have_posts()) @php(the_post())
 
-      {{ App\wc_get_template_part('content', 'single-product', null, get_defined_vars()) }}
+        {{ App\wc_get_template_part('content', 'single-product', null, get_defined_vars()) }}
 
-      @endwhile
+        @endwhile
+      </div>
     </div>
-  </div>
+  </section>
+  @include('partials.section-featured-coffee')
+  @include('partials.section-wholesale')
 @endsection

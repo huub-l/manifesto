@@ -1,0 +1,43 @@
+.section-wholesale {
+  padding: 0 0 185px;
+  background-color: $brand-tertiary;
+
+  .wholesale-overflow {
+    height: 95px;
+    width: 100%;
+    background-color: $brand-primary;
+  }
+
+  .content-left {
+    z-index: 1;
+
+    .img-border {
+      margin-bottom: 0;
+      margin-top: -95px;
+    }
+  }
+
+  .content-right {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btn {
+      margin-top: 70px;
+    }
+  }
+  //Below max width md
+  @include media-breakpoint-down(md) {
+    padding: 0 0 100px;
+
+    .content-right {
+      text-align: center;
+      margin-top: 100px;
+
+      .btn {
+        margin-top: 50px;
+      }
+    }
+  }
+}

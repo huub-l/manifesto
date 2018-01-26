@@ -1,0 +1,17 @@
+form.checkout.woocommerce-checkout {
+  @extend .container;
+
+  & > .col2-set {
+    @extend .row;
+  }
+
+  .col2-set > .col-1,
+  .col2-set > .col-2 {
+    @extend .col-12;
+  }
+
+  .form-row.woocommerce-invalid .required,
+  .form-row .required {
+    color: $brand-secondary;
+  }
+}

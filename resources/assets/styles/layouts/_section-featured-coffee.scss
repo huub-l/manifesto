@@ -8,20 +8,7 @@
     margin-bottom: 55px;
   }
 
-  .coffee-product {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 30px;
-
-    h3 {
-      margin-top: 35px;
-      margin-bottom: 18px;
-    }
-
-    &:hover {
-      background-color: rgb(37, 37, 37);
-      box-shadow: 0 14px 13px 0 rgba(0, 0, 0, 0.24);
-    }
+  .single-product & {
+    background-color: $brand-primary;
   }
 }
