@@ -15,3 +15,67 @@ form.checkout.woocommerce-checkout {
     color: $brand-secondary;
   }
 }
+
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1 {
+  float: left;
+  width: 48%;
+}
+
+table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents {
+  background-color: #5c5c5c;
+}
+
+tr.woocommerce-cart-form__cart-item.cart_item .product-remove a {
+  color: $brand-secondary !important;
+
+  &:hover {
+    color: $white !important;
+    background-color: $brand-secondary !important;
+  }
+}
+
+input[name="update_cart"][disabled] {
+  height: 0;
+  transition: all 0.5s ease;
+  padding: 0 !important;
+  border: none;
+}
+
+input[name="update_cart"]:not([disabled]) {
+  color: $white;
+  display: inline;
+  transition: all 0.5s ease;
+  height: auto;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  @extend .btn;
+
+  color: $brand-secondary !important;
+  background: transparent !important;
+}
+
+table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents {
+  border-radius: 0;
+}
+
+.woocommerce-message {
+  border-top-color: $brand-secondary;
+
+  &::before {
+    color: $brand-secondary;
+  }
+}
+
+label[for="payment_method_stripe"] {
+  color: #4f514b;
+}
+
+.cart-wrapper {
+  background-color: #1f1f1f;
+  padding: 75px 0;
+}
