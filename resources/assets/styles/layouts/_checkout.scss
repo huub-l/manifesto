@@ -79,3 +79,21 @@ label[for="payment_method_stripe"] {
   background-color: #1f1f1f;
   padding: 75px 0;
 }
+
+.template-cartpage {
+  .section-wholesale {
+    background-color: $brand-primary;
+
+    .wholesale-overflow {
+      background-color: $brand-tertiary;
+    }
+  }
+
+  footer.content-info {
+    background-color: $brand-tertiary;
+
+    .footer-overflow {
+      background-color: $brand-primary;
+    }
+  }
+}
