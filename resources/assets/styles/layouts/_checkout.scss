@@ -80,12 +80,33 @@ label[for="payment_method_stripe"] {
   padding: 75px 0;
 }
 
+.woocommerce-order-details,
+.woocommerce-customer-details {
+  @extend .container;
+
+  .col-1,
+  .col-2 {
+    @extend .col-12;
+  }
+}
+
 .template-cartpage {
   .section-wholesale {
     background-color: $brand-primary;
 
     .wholesale-overflow {
       background-color: $brand-tertiary;
+    }
+  }
+
+  .woocommerce-order {
+    & > .col2-set {
+      @extend .row;
+    }
+
+    .col2-set > .col-1,
+    .col2-set > .col-2 {
+      @extend .col-12;
     }
   }
 

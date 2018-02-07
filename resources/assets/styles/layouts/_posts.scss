@@ -1,0 +1,26 @@
+.blog-content {
+  background: $brand-tertiary;
+
+  .entry-content,
+  .lower-content {
+    padding: 75px 0;
+  }
+
+  .blog-slider {
+    .slick-prev::before,
+    .slick-next::before {
+      color: $brand-secondary;
+      opacity: 1;
+      font-size: 30px;
+    }
+
+    .slick-prev {
+      z-index: 5;
+      left: 25px;
+    }
+
+    .slick-next {
+      right: 25px;
+    }
+  }
+}

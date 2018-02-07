@@ -100,6 +100,19 @@ export default {
          videoTemplate: `<a href="{{link}}" target="_blank" style="background-image:url({{previewImage}})" class="insta-image"></a>`,
          carouselFrameTemplate: `<a href="{{link}}" target="_blank" style="background-image:url({{previewImage}})" class="insta-image"></a>`,
       }).run();
+
+      $(document).ready(function(){
+        $('.blog-slider').slick({
+          responsive: [
+           {
+             breakpoint: 800,
+             settings: {
+               infinite: true,
+             },
+           },
+         ],
+        });
+      });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

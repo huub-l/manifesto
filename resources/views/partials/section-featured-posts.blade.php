@@ -1,6 +1,11 @@
+@php($blog_title = get_field('blog_intro'))
 <section class="featured-posts">
   <div class="container">
-    <h2><strong>We specialize</strong> in all things coffee</h2>
+    @if($blog_title)
+      <h2>{!! $blog_title !!}</h2>
+    @else
+      <h2><strong>Recent</strong> Updates</h2>
+    @endif
     <div class="row no-gutters">
       @php
         $args = array(

@@ -228,6 +228,18 @@ body:not(.home) header.banner,
   top: 29px;
 }
 
+#mobile-header-menu {
+  background-color: $brand-tertiary;
+  color: $white;
+  border-color: $brand-secondary;
+
+  li.menu-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 //Seach
 
 header .search {
